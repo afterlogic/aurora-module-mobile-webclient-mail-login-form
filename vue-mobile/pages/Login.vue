@@ -1,5 +1,5 @@
 <template>
-  <LoginLayout :subheading="$t('MAILLOGINFORMMOBILEWEBCLIENT.LABEL_LOGIN_TO_CONTINUE')">
+  <LoginLayout :subheading="processLoginResultComponent ? '' : $t('MAILLOGINFORMMOBILEWEBCLIENT.LABEL_LOGIN_TO_CONTINUE')">
     <template v-if="processLoginResultComponent">
       <component
         :is="processLoginResultComponent"
