@@ -86,7 +86,7 @@
         <AppButton
           data-test-id="login-submit"
           class="text-uppercase"
-          :label="$t('COREWEBCLIENT.LABEL_LOGIN')"
+          :label="$t('COREWEBCLIENT.ACTION_SIGN_IN')"
           :loading="loading"
           @click="proceedLogin"
           :disabled="!canSubmit"
