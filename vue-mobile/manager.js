@@ -10,10 +10,11 @@ export default {
   },
 
   getAnonymousPages () {
+    const hashModuleName = settings.getSetting('hashModuleName') || 'mail'
     return [
       {
-        pageName: 'login',
-        pagePath: '/',
+        pageName: 'mail-login',
+        pagePath: `/${hashModuleName}`,
         pageComponent: () => import('./pages/Login'),
       },
     ]
