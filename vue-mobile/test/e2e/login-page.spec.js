@@ -8,8 +8,9 @@ const { step } = sharedHelper('login')
 
 test.describe('Mobile mail login page', () => {
   test('shows username, domain area, and password', async ({ page }) => {
-    await step('Open mobile URL', async () => {
-      await page.goto('')
+    await step('Open mobile mail login URL', async () => {
+      // Not the default route: the default belongs to the standard login form.
+      await page.goto('#/mail-login')
     })
 
     await step('Expect mail login form fields', async () => {

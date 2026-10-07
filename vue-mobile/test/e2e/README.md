@@ -17,9 +17,9 @@ npm run test:e2e -- --setup "MailLoginFormMobileWebclient iPhone13"
 npm run test:e2e:ui -- --setup "MailLoginFormMobileWebclient iPhone13"
 ```
 
-Enable `MailLoginFormWebclient` + `MailLoginFormMobileWebclient` and disable
-`StandardLoginFormMobileWebclient` on the stand (both register the anonymous
-`login` page).
+Enable `MailLoginFormWebclient` + `MailLoginFormMobileWebclient` on the stand.
+The mail login page lives at `#/mail-login` (not the default route), so it can
+coexist with `StandardLoginFormMobileWebclient`.
 
 `--setup "<modules> <devices>"` (like desktop). Comma-separate multiple modules/devices.
 `*` = all modules: `--setup "* iPhone13"`. Device aliases: `"iPhone 13"` → `iPhone13`.

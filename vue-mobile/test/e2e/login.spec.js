@@ -13,7 +13,7 @@ test.describe('Mobile mail login', () => {
 
   test('user can log in with username and domain', async ({ page }) => {
     test.setTimeout(90000)
-    await loginAsTestUser(page)
+    await loginAsTestUser(page, { loginPath: '#/mail-login' })
 
     await step('Confirm login form is gone', async () => {
       await expect(page.getByTestId('login-username')).not.toBeVisible()
